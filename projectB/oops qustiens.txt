@@ -1,0 +1,19 @@
+1 Q1. What is an interface ?
+2 Q2. Why interfaces are called as contract ?
+3 Q3. What are null interfaces ?
+4 Q4. What are marker interface ?
+5 Q5. Give some examples for marker interfaces ?
+6 Q6. What is default method in interfaces ? 7 q7. Differences between interfaces and abstract class ?
+8 q8. Should abstract classes have abstract methods ?
+9 q9. Is it possible to create objects for abstract classes ?
+10 q10. Do abstract classes have constructors ?
+11 q11. If it is not possible to create an object] for an abstract class, then why do they have constructors ?
+12 q12. When to use interfaces ?
+13 q13. When to use abstract classes ?
+14 q14. Can a class have only private constructors ?
+15 q15. How to create objects for classes with private constructors ?
+16 q16. What is de-coupling ?
+17 q17. What is cohesiveness between objects?
+18 q18. Explain "has-a" and "is-a" relationship between objects with examples ?
+19 q19. What do you mean by Single Responsibility Principle?
+20 q20. What is Dependency Injection /Inversion of control (DI/IOC)?

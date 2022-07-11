@@ -1,0 +1,129 @@
+Q1. What is an interface?
+        An interface is a fully abstract class. 
+		It includes a group of abstract methods (methods without a body).
+        An interface in Java is a blueprint of a class. 
+		It has static constants and abstract methods.
+		The interface in Java is a mechanism to achieve abstraction.
+		Example,
+			interface printable{  
+			void print();  
+			}  	
+			class A6 implements printable{  
+				public void print(){System.out.println("Hello");}    
+				public static void main(String args[]){  
+				A6 obj = new A6();  
+				obj.print();  
+				}  
+			}  
+			
+Q2. Why interfaces are called as contract?
+		Interfaces form a contract [emphasis added] between the class and the outside world, and this contract is enforced at build time by the compiler.
+		To implement an interface is to promise, to guarantee, that the class will come through on its end of the bargain and 
+	implement everything in the interface.
+		Example,
+			public interface Edible {
+				public boolean hasNuts();
+				public void eat();
+			}
+			public class PeanutbutterSandwich implements Edible {
+				public boolean hasNuts(){
+					return true;
+				}
+				public void eat(){
+				if(hasNuts())
+					System.out.println("I contain nuts!");
+				else
+					System.out.println("I don't contain nuts!");
+				}
+			}
+	
+Q3. What are null interfaces?
+		Null interface is another name for marker interface. 
+		Such an interface is empty, i.e. without any method declarations.
+		they do not have function declarations in them, they are empty interfaces.
+		this is to convey the compiler that they have to be treated differently.
+		Example,
+			interface markerImp {
+			
+			}	
+			class MarkerTest implements markerImp{
+
+			}
+			public class TestInstanceOf {
+				public static void main(String []args){
+					MarkerTest mt = new MarkerTest();
+					if(mt instanceof markerImp){
+						System.out.println("True");
+					} else {
+						System.out.println("False");
+					}
+				}
+			}
+
+Q4. What are marker interface?
+		A marker interface is an interface that has no methods or constants inside it. 
+		It provides run-time type information about objects, so the compiler and JVM have additional information about the object. 
+		A marker interface is also called a tagging interface.
+
+Q5. Give some examples for marker interfaces?
+		Serializable interface
+		Cloneable interface
+		Remote interface
+		
+Q6. What is default method in interfaces?
+		It allows the interfaces to have methods with implementation without affecting the classes that implement the interface.
+		
+Q7. Differences between interface and abstract class?
+		Interface:
+			Interface can have only abstract methods
+			Interface supports multiple inheritance.
+			Interface has only static and final variables.
+			The interface keyword is used to declare interface.
+			An interface can extend another Java interface only.
+			
+		Abstract class:
+			Abstract class can have abstract and non-abstract methods.
+			Abstract class doesn't support multiple inheritance.
+			Abstract class can have final, non-final, static and non-static variables.
+			The abstract keyword is used to declare abstract class.
+			An abstract class can extend another Java class and implement multiple Java interfaces.
+			
+Q8. Should abstract classes have abstract methods?
+		An abstract class is not required to have an abstract method in it. 
+		But any class that has an abstract method in it or that does not provide an implementation for any abstract methods 
+	declared in its super classes must be declared as an abstract class.
+	
+Q9. Is it possible to create objects for abstract classes?
+		We cannot create objects of an abstract class.
+		To implement features of an abstract class, we inherit subclasses from it and create objects of the subclass.
+		A subclass must override all abstract methods of an abstract class.
+		
+Q10. Do abstract classes have constructors?
+		An abstract class can have a constructor in Java. 
+		You can either explicitly provide a constructor to the abstract class or if you don't, the compiler will add a 
+	default constructor of no argument in the abstract class.
+		This is true for all classes and it also applies to an abstract class.
+		
+Q11. If it is not possible to create object for an abstract class, then why do they have constructors?
+		
+Q12. When to use interfaces?
+		You want to specify the behaviour of a particular data type, but not concerned about who implements its behaviour.
+		You want to take advantage of multiple inheritances.
+		You expect that unrelated classes would implement your interface.
+		
+Q13. When to use abstract classes?
+		An abstract class is used if you want to provide a common, implemented functionality among all the implementations of the component. 
+		Abstract classes will allow you to partially implement your class, whereas interfaces would have no implementation for any members whatsoever.
+		
+Q14. Can a class have only private constructors?
+		Private constructors in Java are accessed only from within the class. 
+		You cannot access a private constructor from any other class.
+		
+Q15. How to create objects for classes with private constructors?
+Q16. What is de-coupling?
+Q17. What is cohesiveness between objects?
+Q18. Explain "has-a" and "is-a" relationship between objects with examples?
+Q19. What do you mean by Single Responsibility Principle?
+		The Single Responsibility Principle (SRP) is the concept that any single object in object-oriented programming (OOP) 
+	should be made for one specific function. 
+Q20. What is Dependency Injection / Inversion Of Control (DI / IOC)?
